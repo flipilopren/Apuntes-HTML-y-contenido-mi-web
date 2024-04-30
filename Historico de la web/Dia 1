@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+         <title>1ºWebman</title>
+    </head>
+    <body>
+        <form action="/formulario" method="post">
+                <label for="Nombre">Nombre</label>
+                <input id="Nombre" name="Nombres" placeholder="Escribe tu nombre"
+                type="text"/>
+                <br>
+                <label for="apellido">apellido</label>
+                <input id="apellido" name="apellido" placeholder="Escribe tu apellido"
+                type="text"/>
+                <br><br><br>
+                <label for="formulario">Formula</label>
+                <br><br>
+                <textarea name="comentario" rows="5" id="formulario" placeholder="Comenta lo que quieras" 
+                cols="50"></textarea>
+                <input type="submit"/>
+                <li>cosa 1</li>
+                <li>cosa 2</li>
+                <li>cosa 3</li>
+
+        </form>
+
+       <h1>Dia 1 de la web</h1>
+       <h2>Todo hecho a mano</h2>
+       <p> hr crea lineas para separar texto<br>span style="color: (color que quieras) 
+        cambia el color<br>a href="https://direccion" crea un enlaze a donde ordenes
+        <br>hr crea lineas para separar texto<br>br hace saltos de linea<p>
+            <hr>
+        <h2>Capitorio</h2>
+
+    <a href="https://www.google.com">enlaze a google</a> <br><br>
+    <br>
+    <a href="https://github.com/flipilopren/ApuntesLinux/blob/main/Simple%20HTML%20code%20by%20me">Ver codigo web con formularios</a> <p>No se guarda la info, pero existen.</p>
+    <img src="img/us-capitol.webp" width="400"/>
+       
+
+
+</body>
+</html>
