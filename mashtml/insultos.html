@@ -13,8 +13,17 @@
         h1, h2 {
             color: #333;
         }
-        p {
-            margin: 10px 0;
+        h1 {
+            display: flex;
+            align-items: center;
+        }
+        h1::before {
+            content: "😡";
+            margin-right: 10px;
+        }
+        h2 {
+            font-weight: bold;
+            text-decoration: underline;
         }
         .section {
             margin-bottom: 20px;
@@ -23,6 +32,28 @@
             font-weight: bold;
             color: #d9534f;
         }
+        .three-column-list {
+            display: flex;
+            flex-wrap: wrap;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        .three-column-list p {
+            width: 30%;
+            margin: 10px 1%;
+            position: relative;
+        }
+        .three-column-list p::before {
+            content: "· ";
+            font-size: 1.2em;
+            position: absolute;
+            left: -15px;
+        }
+        .three-column-list::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -30,124 +61,104 @@
     
     <div class="section">
         <h2>Portugués</h2>
-        <p><strong>Filho da puta</strong> - Hijo de puta</p>
-        <p><strong>Vai se foder</strong> - Vete a la mierda</p>
-        <p><strong>Caralho</strong> - Polla (se usa como exclamación negativa)</p>
-        <p><strong>Puta que pariu</strong> - Maldita sea (literalmente, "la puta que te parió")</p>
-        <p><strong>Merda</strong> - Mierda</p>
-  	<p><strong>Idiota</strong> - Idiota</p>
-   	<p><strong>Imbecil</strong> - Imbécil</p>
- 	<p><strong>Palhaço</strong> - Payaso</p>
- 	<p><strong>Babaca</strong> - Idiota, gilipollas</p>
-    	<p><strong>Otário</strong> - Tonto, imbécil</p>
-    	<p><strong>Porra</strong> - Mierda</p>
-    	<p><strong>Vagabundo</strong> - Vago, holgazán</p>
-    	<p><strong>Cretino</strong> - Cretino</p>
-    	<p><strong>Paspalho</strong> - Bobo, idiota</p>
-    	<p><strong>Desgraçado</strong> - Desgraciado</p>
-    	<p><strong>Besta</strong> - Bestia</p>
-    	<p><strong>Chato</strong> - Pesado, molesto</p>
-	<h3>Insultos racistas (precaucion sensibles)</h3>
-	<p><strong>Macaco</strong> - Mono (Usado como término despectivo hacia personas negras)</p>
-    	<p><strong>Crioulo(a)</strong> - Esclavo(a)</p>
-    	<p><strong>Negro(a) de merda</strong> - Negro(a) de mierda</p>
-    	<p><strong>Burrice de preto</strong> - Estupidez de negro</p>
-    	<p><strong>Mulato(a)</strong> - Término despectivo para personas mestizas</p>
-    	<p><strong>Escurinho(a)</strong> - Oscurito(a)</p>
-    	<p><strong>Africano(a) de merda</strong> - Africano(a) de mierda</p>
-    	<p><strong>Zulu</strong> - Término despectivo para personas negras, especialmente de África</p>
-    	<p><strong>Pretalhão/Pretalhuda</strong> - Término ofensivo para personas negras (diminutivo de "preto")</p>
-    	<p><strong>Cafuzo(a)</strong> - Término despectivo para personas de ascendencia negra e indígena</p>
-  </div>
+        <div class="three-column-list">
+            <p>Filho da puta - Hijo de puta</p>
+            <p>Vai se foder - Vete a la mierda</p>
+            <p>Caralho - Polla (se usa como exclamación negativa)</p>
+            <p>Puta que pariu - Maldita sea (literalmente, "la puta que te parió")</p>
+            <p>Merda - Mierda</p>
+            <p>Idiota - Idiota</p>
+            <p>Imbecil - Imbécil</p>
+            <p>Palhaço - Payaso</p>
+            <p>Babaca - Idiota, gilipollas</p>
+            <p>Otário - Tonto, imbécil</p>
+            <p>Porra - Mierda</p>
+            <p>Vagabundo - Vago, holgazán</p>
+            <p>Cretino - Cretino</p>
+            <p>Paspalho - Bobo, idiota</p>
+            <p>Desgraçado - Desgraciado</p>
+            <p>Besta - Bestia</p>
+            <p>Chato - Pesado, molesto</p>
+            <p>Macaco - Mono (Usado como término despectivo hacia personas negras)</p>
+            <p>Crioulo(a) - Esclavo(a)</p>
+            <p>Negro(a) de merda - Negro(a) de mierda</p>
+            <p>Burrice de preto - Estupidez de negro</p>
+            <p>Mulato(a) - Término despectivo para personas mestizas</p>
+            <p>Escurinho(a) - Oscurito(a)</p>
+            <p>Africano(a) de merda - Africano(a) de mierda</p>
+            <p>Zulu - Término despectivo para personas negras, especialmente de África</p>
+            <p>Pretalhão/Pretalhuda - Término ofensivo para personas negras (diminutivo de "preto")</p>
+            <p>Cafuzo(a) - Término despectivo para personas de ascendencia negra e indígena</p>
+        </div>
+    </div>
 
     <div class="section">
         <h2>Francés</h2>
-        <p><strong>Putain</strong> - Puta (también se usa como exclamación negativa, como "joder")</p>
-        <p><strong>Connard / Connasse</strong> - Gilipollas (connard es masculino, connasse es femenino)</p>
-        <p><strong>Salaud / Salope</strong> - Cabrón / Zorra</p>
-        <p><strong>Merde</strong> - Mierda</p>
-        <p><strong>Enculé</strong> - Cabrón (literalmente "follado por el culo")</p>
-	<p><strong>Abruti</strong> - Imbécil</p>
-    	<p><strong>Crétin</strong> - Cretino</p>
-    	<p><strong>Con</strong> - Idiota, gilipollas</p>
-    	<p><strong>Connard/Connasse</strong> - Cabrón/Cabra</p>
-    	<p><strong>Salaud/Salope</strong> - Cabrón/Zorra</p>
-    	<p><strong>Enfoiré/Enfoirée</strong> - Cabrón/Cabra</p>
-    	<p><strong>Bâtard</strong> - Bastardo</p>
-    	<p><strong>Fils de pute</strong> - Hijo de puta</p>
-    	<p><strong>Trou du cul</strong> - Gilipollas (literalmente "agujero del culo")</p>
-    	<p><strong>Tête de con</strong> - Cabeza de imbécil</p>
-    	<p><strong>Gros con</strong> - Gran imbécil</p>
-    	<p><strong>Branleur/Branleuse</strong> - Vago/Vaga</p>
-    	<p><strong>Nul/Nulle</strong> - Inútil</p>
-    	<p><strong>Tapette</strong> - Marica</p>
-    	<p><strong>Pauvre con</strong> - Pobre imbécil</p>
-	<h2>Insultos Racistas - Français</h2>
-	<p><strong>Nègre</strong> - Negro (forma extremadamente ofensiva)</p>
-	<p><strong>Bicot</strong> - Término despectivo para personas árabes o norteafricanas</p>
-    	<p><strong>Raton</strong> - Rata (usado despectivamente hacia personas de origen norteafricano)</p>
-    	<p><strong>Youpin</strong> - Término despectivo para personas judías</p>
-    	<p><strong>Boche</strong> - Término despectivo para personas alemanas</p>
-    	<p><strong>Bougnoule</strong> - Término despectivo para personas de origen norteafricano</p>
-    	<p><strong>Nazi</strong> - Nazi (a menudo usado de manera despectiva hacia alemanes o personas con ideologías de extrema derecha)</p>
-    	<p><strong>Négro</strong> - Negro (forma despectiva y abreviada)</p>
-    	<p><strong>Bouffeur de raton</strong> - Comedor de ratas (usado despectivamente hacia personas de origen norteafricano)</p>
-    	<p><strong>Sale juif</strong> - Sucio judío</p>
+        <div class="three-column-list">
+            <p>Putain - Puta (también se usa como exclamación negativa, como "joder")</p>
+            <p>Connard / Connasse - Gilipollas (connard es masculino, connasse es femenino)</p>
+            <p>Salaud / Salope - Cabrón / Zorra</p>
+            <p>Merde - Mierda</p>
+            <p>Enculé - Cabrón (literalmente "follado por el culo")</p>
+            <p>Abruti - Imbécil</p>
+            <p>Crétin - Cretino</p>
+            <p>Con - Idiota, gilipollas</p>
+            <p>Connard/Connasse - Cabrón/Cabra</p>
+            <p>Salaud/Salope - Cabrón/Zorra</p>
+            <p>Enfoiré/Enfoirée - Cabrón/Cabra</p>
+            <p>Bâtard - Bastardo</p>
+            <p>Fils de pute - Hijo de puta</p>
+            <p>Trou du cul - Gilipollas (literalmente "agujero del culo")</p>
+            <p>Tête de con - Cabeza de imbécil</p>
+            <p>Gros con - Gran imbécil</p>
+            <p>Branleur/Branleuse - Vago/Vaga</p>
+            <p>Nul/Nulle - Inútil</p>
+            <p>Tapette - Marica</p>
+            <p>Pauvre con - Pobre imbécil</p>
+            <p>Nègre - Negro (forma extremadamente ofensiva)</p>
+            <p>Bicot - Término despectivo para personas árabes o norteafricanas</p>
+            <p>Raton - Rata (usado despectivamente hacia personas de origen norteafricano)</p>
+            <p>Youpin - Término despectivo para personas judías</p>
+            <p>Boche - Término despectivo para personas alemanas</p>
+            <p>Bougnoule - Término despectivo para personas de origen norteafricano</p>
+            <p>Nazi - Nazi (a menudo usado de manera despectiva hacia alemanes o personas con ideologías de extrema derecha)</p>
+            <p>Négro - Negro (forma despectiva y abreviada)</p>
+            <p>Bouffeur de raton - Comedor de ratas (usado despectivamente hacia personas de origen norteafricano)</p>
+            <p>Sale juif - Sucio judío</p>
+        </div>
     </div>
-	<div class="section">
-    <h2>Insultos en Inglés</h2>
-    <p><strong>Idiot</strong> - Idiota</p>
-    <p><strong>Moron</strong> - Imbécil</p>
-    <p><strong>Asshole</strong> - Gilipollas</p>
-    <p><strong>Bastard</strong> - Bastardo</p>
-    <p><strong>Bitch</strong> - Perra (usado principalmente hacia mujeres)</p>
-    <p><strong>Jerk</strong> - Imbécil, tonto</p>
-    <p><strong>Douchebag</strong> - Gilipollas, imbécil</p>
-    <p><strong>Prick</strong> - Cabrón</p>
-    <p><strong>Dickhead</strong> - Cabeza de pene</p>
-    <p><strong>Son of a bitch</strong> - Hijo de puta</p>
-    <p><strong>Scumbag</strong> - Escoria</p>
-    <p><strong>Cunt</strong> - Coño (muy ofensivo)</p>
-    <p><strong>Wanker</strong> - Gilipollas (usado principalmente en Reino Unido)</p>
-    <p><strong>Fucker</strong> - Cabrón</p>
-    <p><strong>Tool</strong> - Idiota</p>
-    <p><strong>Slut</strong> - Zorra (usado principalmente hacia mujeres)</p>
-    <p><strong>Pig</strong> - Cerdo (usado para describir a alguien sucio o grosero)</p>
-    <p><strong>Bimbo</strong> - Boba (usado principalmente hacia mujeres)</p>
-    <p><strong>Dumbass</strong> - Imbécil</p>
-    <p><strong>Twit</strong> - Tonto</p>
-</div>
-	
-<div class="section">
+
+    <div class="section">
         <h2>Ruso</h2>
-        <p><strong>Сука (suka)</strong> - Puta</p>
-        <p><strong>Блядь (blyad')</strong> - Puta (también puede significar "mierda" en algunos contextos)</p>
-        <p><strong>Ебать (yebat')</strong> - Follar</p>
-        <p><strong>Пидорас (pidoras)</strong> - Maricón (muy ofensivo)</p>
-        <p><strong>Мудак (mudak)</strong> - Imbécil</p>
-        <p><strong>Чмо (chmo)</strong> - Perdedor, desgraciado</p>
-        <p><strong>Дурак (durak) / Дура (dura)</strong> - Idiota (durak es masculino, dura es femenino)</p>
-        <p><strong>Сволочь (svoloch')</strong> - Bastardo</p>
-        <p><strong>Говно (govno)</strong> - Mierda</p>
-        <p><strong>Задница (zadnitsa)</strong> - Culo</p>
-        <p><strong>Урод (urod)</strong> - Monstruo, deforme</p>
-        <p><strong>Тварь (tvar')</strong> - Bestia, escoria</p>
-        <p><strong>Мразь (mraz')</strong> - Escoria</p>
-        <p><strong>Пошёл на хуй (poshol na khuy)</strong> - Vete a la mierda</p>
-        <p><strong>Дебил (debil)</strong> - Imbécil</p>
-        <p><strong>Идиот (idiot)</strong> - Idiota</p>
-        <p><strong>Сука бл@ть (suka blyat')</strong> - Puta madre</p>
-	<h2>Insultos Racistas - Русский</h2>
-    	<p><strong>Чёрный</strong> (Chyorny) - Negro</p>
-    	<p><strong>Негр</strong> (Negr) - Negro</p>
-    	<p><strong>Чёрножопый</strong> (Chyornozhopiy) - Culo negro</p>
-    	<p><strong>Чёрт</strong> (Chyort) - Demonio (Usado como término despectivo hacia personas no blancas)</p>
-    	<p><strong>Чёрт возьми</strong> (Chyort voz'mi) - Demonio te lleve (similar a "vete al infierno")</p>
-    	<p><strong>Шавка</strong> (Shavka) - Término despectivo para personas de Asia Central</p>
-    	<p><strong>Жид</strong> (Zhid) - Término despectivo para personas judías</p>
-    	<p><strong>Гастарбайтер</strong> (Gastarbayter) - Trabajador migrante (a menudo usado despectivamente hacia personas de Asia Central)</p>
-    	<p><strong>Манси</strong> (Mansi) - Término despectivo para personas de la etnia Mansi, indígenas del norte de Rusia</p>
-    	<p><strong>Кавказец</strong> (Kavkazets) - Cáucaso (Usado a menudo despectivamente hacia personas del Cáucaso)</p>
+        <div class="three-column-list">
+            <p>Сука (suka) - Puta</p>
+            <p>Блядь (blyad') - Puta (también puede significar "mierda" en algunos contextos)</p>
+            <p>Ебать (yebat') - Follar</p>
+            <p>Пидорас (pidoras) - Maricón (muy ofensivo)</p>
+            <p>Мудак (mudak) - Imbécil</p>
+            <p>Чмо (chmo) - Perdedor, desgraciado</p>
+            <p>Дурак (durak) / Дура (dura) - Idiota (durak es masculino, dura es femenino)</p>
+            <p>Сволочь (svoloch') - Bastardo</p>
+            <p>Говно (govno) - Mierda</p>
+            <p>Задница (zadnitsa) - Culo</p>
+            <p>Урод (urod) - Monstruo, deforme</p>
+            <p>Тварь (tvar') - Bestia, escoria</p>
+            <p>Мразь (mraz') - Escoria</p>
+            <p>Пошёл на хуй (poshol na khuy) - Vete a la mierda</p>
+            <p>Дебил (debil) - Imbécil</p>
+            <p>Идиот (idiot) - Idiota</p>
+            <p>Сука бл@ть (suka blyat') - Puta madre</p>
+            <p>Чёрный (Chyorny) - Negro</p>
+            <p>Негр (Negr) - Negro</p>
+            <p>Чёрножопый (Chyornozhopiy) - Culo negro</p>
+            <p>Чёрт (Chyort) - Demonio (Usado como término despectivo hacia personas no blancas)</p>
+            <p>Чёрт возьми (Chyort voz'mi) - Demonio te lleve (similar a "vete al infierno")</p>
+            <p>Шавка (Shavka) - Término despectivo para personas de Asia Central</p>
+            <p>Жид (Zhid) - Término despectivo para personas judías</p>
+            <p>Гастарбайтер (Gastarbayter) - Trabajador migrante (a menudo usado despectivamente hacia personas de Asia Central)</p>
+            <p>Манси (Mansi) - Término despectivo para personas de la etnia Mansi, indígenas del norte de Rusia</p>
+            <p>Кавказец (Kavkazets) - Cáucaso (Usado a menudo despectivamente hacia personas del Cáucaso)</p>
+        </div>
 
         <h3>Ejemplos prácticos:</h3>
         <p class="example">Ты что, сука, совсем офигел? - ¿Estás, puta, completamente loco?</p>
