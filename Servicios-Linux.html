@@ -7,14 +7,24 @@
     <title>Daniel | Servicios</title>
     <link rel="stylesheet" href="/CSS/styles.css">
     <style>
+       
+
         .Contenido1 h1 {
-            font-size: 40px;
+            font-size: 70px;
             font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline rgb(43, 0, 255);
+            color: rgb(43, 0, 255);
         }
 
         .Contenido1 h2 {
-            font-size: 30px;
+            font-size: 50px;
             font-family: Arial, Helvetica, sans-serif;
+            color: rgb(43, 0, 255);
+        }
+
+        .Contenido1 h3 {
+            font-size: 45px;
+            color: rgb(43, 0, 255);
         }
 
         .Contenido1 {
@@ -25,25 +35,23 @@
             font-size: 30px;
             background-color: darkgrey;
             width: 1300;
-            height: 2000px;
-            padding-top: 1%;
+            height: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
         }
 
-        .Contenido1 h1 {
-            font-size: 70px;
-            padding-left: 5%;
-            padding-right: 10%;
-        }
-
-        .Contenido1 p {
-            padding-left: 5%;
-            padding-right: 10%;
-        }
-
-        .Contenido1 h2 {
+        .Contenido1 {
             padding-left: 5%;
             padding-right: 10%;
             font-size: 50px;
+        }
+
+        .Contenido1 ul li {
+            color: rgb(43, 0, 255);
+        }
+
+        .negrita1 {
+            color: red;
         }
     </style>
 
@@ -63,47 +71,55 @@
                         <li> <a href="Seguridad.html">Seguridad Informatica</a> </li>
                         <li> <a href="Arch-Linux.html">Arch Linux</a> </li>
                 </li>
-                    </ul>
+            </ul>
             <li><a href="https://github.com/flipilopren?tab=repositories">Github</a></li>
             </ul>
         </nav>
     </Header>
     <div class="Contenido1">
-        <h1>Servicios En Linux</h1>
-        <h2>Samba Debian o Ubuntu</h2>
-
-        <p>-Instalar samba desde cualquier distribucion</p>
+        <ul>
+            <li>
+                <h1>Servicios En Linux</h1>
+            </li>
+            <li>
+                <h2>SMB Debian o Ubuntu</h2>
+            </li>
+            <li>
+                <h3>Transferencia de archivos Linux -> Windows</h3>
+            </li>
+        </ul>
+        <hr>
 
         <p> Editar el fichero de configuracion en /etc/samba/smb.conf</p>
-
         <p> --- compartir de forma basica una carpeta de linux a windows ---</p>
-
         <p> agregar al fichero de configuracion:</p>
-
         <p> [share]
         <p> path /ruta/al/directorio # Indica la ruta al directorio que se quiere compartir</p>
-        <p> browsable = yes # Permite que los clientes de windows accedan al directorio compartido</p>
-        <p> guest ok = yes # Permite ver los contenidos de la carpeta sin el uso de credenciales (potencial riesgo
-            de
-            seguridad)</p>
-        <p> read only = no # Indica que los fichero no son unicamente de lectura (no se permiten cambios de
+        <p> <strong>browsable </strong>= yes # Permite que los clientes de windows accedan al directorio compartido</p>
+        <p> <strong>guest ok </strong>= yes # Permite ver los contenidos de la carpeta sin el uso de credenciales
+            (potencial riesgo de seguridad)</p>
+        <p> <strong>read only </strong>= no # Indica que los fichero no son unicamente de lectura (no se permiten
+            cambios de
             escritura si
             se encuentra encendido)</p>
-        <p> writable = yes # Permite hacer cambios en la carpeta</p>
+        <p> <strong>writable </strong>= yes # Permite hacer cambios en la carpeta</p>
         <p>--- encender el demonio de samba ---</p>
-        <p> systemctl start smbd.service # Enciende el demonio</p>
-        <p>systemctl enable smbd.service # Hace que el proceso se encienda al arrancar la maquina</p>
+        <p><strong>systemctl start smbd.service</strong> # Enciende el demonio</p>
+        <p><strong>systemctl enable smbd.service </strong># Hace que el proceso se encienda al arrancar la maquina</p>
         <p>En caso de que quieras que samba pida credenciales para acceder a los recursos: </p>
-        <p>useradd samba # Crea un usuario samba</p>
-        <p>passwd samba # Añade una contraseña al usuario samba</p>
-        <p>smbpasswd -a samba # Añade samba a ¿samba?</p>
-        <p>añadir valid users = samba al fichero de configuracion</p>
-        <p>[share]</p>
-        <p>path /ruta/al/directorio</p>
-        <p>valid users = samba</p>
-        <p>browsable = yes</p>
-        <p>public = no</p>
-        <p>writable = yes</p>
+        <p><strong>useradd samba </strong># Crea un usuario samba</p>
+        <p><strong>passwd samba </strong># Añade una contraseña al usuario samba</p>
+        <p><strong>smbpasswd -a samba</strong> # Añade samba a ¿samba?</p>
+        <p><strong>valid users = samba</strong> En el fichero de configuracion</p>
+        <strong class="negrita1">
+            <p>[share]</p>
+            <p>path /ruta/al/directorio</p>
+            <p>valid users = samba</p>
+            <p>browsable = yes</p>
+            <p>public = no</p>
+            <p>writable = yes</p>
+        </strong>
+
 
     </div>
 
