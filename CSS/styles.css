@@ -1,0 +1,111 @@
+nav {
+    display: flex;
+    color: rgb(238, 175, 15);
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    background-color: rgb(85, 85, 85);
+}
+
+body {
+    background-color: rgb(201, 201, 201);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+h1 {
+    color: black;
+    font-size: 50px;
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(238, 175, 15);
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.Contenido {
+    text-align: justify;
+    /* margin-left: 15%;
+    margin-right: 15%;*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background-color: darkgrey;
+    width: 1300;
+    height: 700px;
+    padding-top: 1%;
+}
+
+
+.Contenido h1 {
+    font-size: 70px;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+.Contenido p {
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+.Contenido h2 {
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Menu-horizontal li {
+    padding: 12px;
+}
+
+.Menu-vertical>li>a {
+    display: block;
+    padding: 15px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.Menu-horizontal>li:hover {
+    background-color: rgb(61, 61, 61);
+    border-radius: 5px; /*Redondea las esquinas*/
+}
+
+.Menu-vertical {
+    position:absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+}
+
+.Menu-horizontal li:hover .Menu-vertical {
+    display: block;
+    position: absolute;
+    left: 100;
+    top: 100%;
+    width: calc(100% - 20px);
+    opacity: 0.95;
+    border-radius: 10px;
+    background-color: rgb(61, 61, 61);
+}
