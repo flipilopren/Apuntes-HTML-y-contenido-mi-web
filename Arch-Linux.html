@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel | Arch-Linux</title>
     <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+        .contenido {
+            background-color: darkgrey;
+            padding-bottom: 15px;
+            padding-top: 1px;
+            margin-top: 30px;
+            padding-left: 55px;
+        }
+
+        .contenido h2 {
+            font-size: 40px;
+        }
+
+        .contenido h1 {
+            font-size: 70px;
+            text-decoration: underline;
+        }
+
+        .contenido p {
+            font-size: 30px;
+        }
+    </style>
 </head>
+
 <body>
     <Header>
         <nav>
@@ -25,11 +49,39 @@
             </ul>
         </nav>
     </Header>
-
-
- <footer>
-        <h2> Daniel Canelo</h2>        <br>
+    <div class="contenido">
+        <h1>Uso basico de Arch Linux</h1>
+        <br>
+        <h2>Uso de Pacman (gestor de paquetes)</h2>
+        <p>pacman -S <nombredelpaquete> Instala el pacquete que indiques</p>
+        <p> pacman -Ss <nombredelpaquete> Busca un paquete en los repositorios</p>
+        <p> pacman -Syu Actualizacion del sistema</p>
+        <p> pacman -Syu <nombredelpaquete> Actualizar un paquete</p>
+        <p> pacman -Syy Actualiza los repositorios</p>
+        <p> pacman -R <nombredelpaquete> Elimina un paquete pero no las dependencias</p>
+        <p> pacman -Rs <nombredelpaquete> Elimina el paquete y las dependencias</p>
+        <br>
+        <h2>Activar el repositorio Multilib</h2>
+        <p>1. Editar /etc/pacman.conf </p>
+        <p>2. Descomentar las lineas:</p>
+        <p> [multilib] </p>
+        <p> Include = /etc/pacman.d/mirrorlist</p>
+        <br>
+        <h2>Habilitar AUR (repositorio de la comunidad)</h2>
+        <p>1. Instalar git</p>
+        <p>2. clonar el repositorio oficial de yay</p>
+        <p>git clone https://aur.archlinux.org/yay.git</p>
+        <p>3. ir a la ruta en la que se a instalado yay</p>
+        <p>cd yay</p>
+        <p>4. instalar el paquete</p>
+        <p>makepkg -si</p>
+        <p>sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg
+            -si</p>
+    </div>
+    <footer>
+        <h2> Daniel Canelo</h2>
         <p>Contacto: DanielCaneloCamacho@hotmail.com</p>
     </footer>
 </body>
+
 </html>

@@ -7,27 +7,25 @@
     <title>Daniel | Servicios</title>
     <link rel="stylesheet" href="/CSS/styles.css">
     <style>
-       
+        .Contenido h2 {
+            font-size: 40px;
+        }
 
-        .Contenido1 h1 {
+        .Contenido h1 {
             font-size: 70px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-decoration: underline rgb(43, 0, 255);
-            color: rgb(43, 0, 255);
+            text-decoration: underline;
         }
 
-        .Contenido1 h2 {
-            font-size: 50px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(43, 0, 255);
+        .Contenido p {
+            font-size: 30px;
         }
 
-        .Contenido1 h3 {
-            font-size: 45px;
-            color: rgb(43, 0, 255);
+        .Contenido h3 {
+            font-size: 40px;
+            font-weight: normal;
         }
 
-        .Contenido1 {
+        .Contenido {
             text-align: justify;
             /* margin-left: 15%;
         margin-right: 15%;*/
@@ -38,20 +36,14 @@
             height: auto;
             padding-top: 15px;
             padding-bottom: 10px;
-        }
-
-        .Contenido1 {
             padding-left: 5%;
             padding-right: 10%;
             font-size: 50px;
+            margin-top: 30px;
         }
 
-        .Contenido1 ul li {
-            color: rgb(43, 0, 255);
-        }
-
-        .negrita1 {
-            color: red;
+        .negrita {
+            color: rgba(0, 117, 27, 0.788);
         }
     </style>
 
@@ -76,25 +68,22 @@
             </ul>
         </nav>
     </Header>
-    <div class="Contenido1">
-        <ul>
-            <li>
-                <h1>Servicios En Linux</h1>
-            </li>
-            <li>
-                <h2>SMB Debian o Ubuntu</h2>
-            </li>
-            <li>
-                <h3>Transferencia de archivos Linux -> Windows</h3>
-            </li>
-        </ul>
-        <hr>
 
-        <p> Editar el fichero de configuracion en /etc/samba/smb.conf</p>
-        <p> --- compartir de forma basica una carpeta de linux a windows ---</p>
-        <p> agregar al fichero de configuracion:</p>
-        <p> [share]
-        <p> path /ruta/al/directorio # Indica la ruta al directorio que se quiere compartir</p>
+    <div class="Contenido">
+        <h1>Servicios En Linux</h1>
+        <h2>SMBD Debian o Ubuntu</h2>
+        <h3>1. Editar el fichero de configuracion en <strong>/etc/samba/smb.conf</strong></h3>
+        <h3>2. agregar al fichero de configuracion:</h3>
+        <strong class="negrita">
+            <p>[share]</p>
+            <p>path = /ruta/al/directorio</p>
+            <p>valid users = samba</p>
+            <p>browsable = yes</p>
+            <p>public = no</p>
+            <p>writable = yes</p>
+        </strong>
+
+        <p> <strong>path</strong> /ruta/al/directorio # Indica la ruta al directorio que se quiere compartir</p>
         <p> <strong>browsable </strong>= yes # Permite que los clientes de windows accedan al directorio compartido</p>
         <p> <strong>guest ok </strong>= yes # Permite ver los contenidos de la carpeta sin el uso de credenciales
             (potencial riesgo de seguridad)</p>
@@ -103,22 +92,15 @@
             escritura si
             se encuentra encendido)</p>
         <p> <strong>writable </strong>= yes # Permite hacer cambios en la carpeta</p>
-        <p>--- encender el demonio de samba ---</p>
+        <h3>3. encender el demonio de samba</h3>
         <p><strong>systemctl start smbd.service</strong> # Enciende el demonio</p>
         <p><strong>systemctl enable smbd.service </strong># Hace que el proceso se encienda al arrancar la maquina</p>
-        <p>En caso de que quieras que samba pida credenciales para acceder a los recursos: </p>
-        <p><strong>useradd samba </strong># Crea un usuario samba</p>
-        <p><strong>passwd samba </strong># Añade una contraseña al usuario samba</p>
-        <p><strong>smbpasswd -a samba</strong> # Añade samba a ¿samba?</p>
-        <p><strong>valid users = samba</strong> En el fichero de configuracion</p>
-        <strong class="negrita1">
-            <p>[share]</p>
-            <p>path /ruta/al/directorio</p>
-            <p>valid users = samba</p>
-            <p>browsable = yes</p>
-            <p>public = no</p>
-            <p>writable = yes</p>
-        </strong>
+        <h3>En caso de que quieras que samba pida credenciales para acceder a los recursos: </h3>
+        <p><strong>useradd usuario </strong># Crea un usuario </p>
+        <p><strong>passwd usuario </strong># Añade una contraseña al usuario samba</p>
+        <p><strong>smbpasswd -a usuario</strong> # Añade a samba el usuario</p>
+        <p><strong>valid users = usuario</strong> En el fichero de configuracion</p>
+
 
 
     </div>
